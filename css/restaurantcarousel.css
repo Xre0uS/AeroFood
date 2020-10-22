@@ -1,0 +1,65 @@
+* { 
+    box-sizing: border-box; 
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body { 
+    font-family: sans-serif; 
+  }
+  
+  
+  .restaurantimgcarousel {
+    padding-top: 17px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .carousel-cell {
+    overflow: hidden;
+  }
+  
+  .carousel-cell img {
+    display: block;
+    height: 400px;
+  }
+  
+  .flickity-button {
+    background: transparent;
+    color: #9256F9;
+  }
+  
+  .flickity-page-dots .dot {
+    height: 4px;
+    width: 40px;
+    margin: 0;
+    border-radius: 0;
+    color: #9256F9;
+  }
+  
+  .static-banner {
+    position: absolute;
+    background: hsla(0, 0%, 0%, 0.438);
+    z-index: 2;
+    padding: 2px 20px;
+    font-size: 26px;
+    color: white;
+    pointer-events: none;
+  }
+  
+  .carousel-cell-image.flickity-lazyloaded,
+  .carousel-cell-image.flickity-lazyerror {
+    opacity: 1;
+  }
+  
+  
+  .carousel.is-fullscreen .carousel-cell {
+    height: 100%;
+  }
+  

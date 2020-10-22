@@ -1,0 +1,32 @@
+.searchwrapper {
+    position: absolute;
+    top: 50%;
+    left: 37%;
+}
+
+
+.searchcontainer :focus {
+    border-style: solid;
+    border-color: #9256f9;
+    border-width: 2px;
+    transition: 0.2s ease-in-out;
+}
+
+.searchinput {
+    align-content: center;
+    width: 500px;
+    height: 50px;
+}
+
+.searchinput :focus {
+    border: 10px solid #9256F9;
+}
+
+input{
+    text-align: center;
+    font-size: 18px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}

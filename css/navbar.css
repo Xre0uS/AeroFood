@@ -1,0 +1,216 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px 5px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo{
+    position: absolute;
+    display: block;
+}
+
+.logoIcon{
+    float: left;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.logoText{
+    float: right;
+    padding-left: 10px;
+    font-size: 25pt;
+    color: #9256f9;
+    font-weight: 600;
+}
+
+.nav-links{
+    display: flex;
+    margin-left: 10px;
+    margin-right: auto;
+    font-weight: normal;
+    font-weight: 500;
+    background-color: #f8f8f8;
+}
+
+.nav-links li{
+    list-style: none;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.nav-links a{
+    float: left;
+    display: block;
+    color: #313131;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-spacing: 0;
+    padding: 22px;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover{
+    background:#C09EFC;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.nav-links a.active{
+    background-color: #9256F9;
+    color: white;
+    border-radius: 2px;
+}
+
+.burgerIcon{
+    display: none;
+}
+
+.burgerIcon div{
+    width: 25px;
+    height: 3px;
+    background-color: #313131;
+    margin: 5px;
+}
+
+
+@media screen and (max-width:768px){
+    .nav-links{
+        position: absolute;
+        left: 0px;
+        height: 92vh;
+        top: 8vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+    }
+}
+
+/* login button styles */
+.login-btn {
+    border: 2px solid #9256F9;
+    display: flex;
+    margin-left: auto;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #9256f9;
+    transition: 0.2s ease;
+}
+
+.loginbtncontainer {
+    margin-right: 10px;
+}
+
+.loginbtncontainer :hover {
+    background-color: #9256f9;
+    color: white;
+}
+
+.login-txt {
+    align-content: center;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+.login-icon :hover  + .loginbtncontainer{ 
+    fill: white;
+}
+
+.login {
+    position: relative;
+    display: inline-block;
+  }
+
+.userbtncontainer {
+    position: relative;
+    margin-left: auto;
+    padding-right: 10px;
+}
+
+.warningtext {
+    clear: both;
+    font-size: 14px;
+    color: red;
+    float: left;
+}
+
+.staylogged {
+    float: left;
+    margin-left: 20px;
+}
+
+.usercheckbox {
+    float: right;
+    margin-right: 20px;
+}
+
+.userbtn {
+    border: 2px solid #9256F9;
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    height: 40px;
+    background-color: white;
+    color: #9256f9;
+}
+
+.btncontainer :hover{
+    background-color: #9256f9;
+    color: white;
+}
+
+.userbtn :hover {
+    background-color: #9256f9;
+    color: white;
+}
+
+/* dropdown menu for logged in user */
+.userdropdown {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 174px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+.userdropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.userdropdown :hover{
+    background-color: #C09EFC;
+    color: black;
+}
+  
+.userdropdown a:hover {background-color: #C09EFC;}
+  
+.userbtncontainer:hover .userdropdown {display: block;}

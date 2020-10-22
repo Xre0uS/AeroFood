@@ -1,0 +1,29 @@
+.tagline {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #3d3d3d;
+}
+
+.orderbtncontainer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 24px;
+    color: #3d3d3d;
+}
+
+.orderbtncontainer :hover {
+    color: white;
+    background-color: #9256f9;
+
+}
+
+.ordernow {
+    padding: 20px;
+    border: 2px solid #9256F9;
+    border-radius: 2px;
+    cursor: pointer;
+}

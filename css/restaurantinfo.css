@@ -1,0 +1,152 @@
+.restaurantinfowrapper {
+    position: absolute;
+    margin-top: 30px;
+    padding: 50px;
+    min-width: 1000px;
+}
+
+.ratingwrapper {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.star{
+    position: absolute;
+    margin-top: -24px;
+    margin-left: 35px;
+}
+
+h3 {
+    font-weight: 100;
+    padding-left: 50px;
+}
+
+h4 {
+    font-weight: 100;
+    padding-left: 100px;
+}
+
+.reviewbtncontainer {
+    height: 30px;
+    width: 100px;
+    margin-left: 300px;
+    margin-top: -40px;
+    align-content: center;
+    border-radius: 2px;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.reviewbtn {
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid #9256f9;
+    padding-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    color: #9256f9;
+}
+
+.reviewbtncontainer :hover {
+    background-color: #9256f9;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.wreviewbtncontainer {
+    position: absolute;
+    height: 30px;
+    width: 200px;
+    margin-left: 1500px;
+    margin-top: -40px;
+    align-content: center;
+    border-radius: 2px;
+    justify-content: space-around;
+}
+
+.wreviewbtn {
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid #9256f9;
+    padding-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+}
+
+.wreviewbtncontainer :hover {
+    background-color: #9256f9;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.wreviewbtn :hover {
+    background-color: #9256f9;
+    color: white;
+}
+
+.addimage {
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.addimgmodal h1 {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.addimgmodal {
+    z-index: 1;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: 400px;
+    padding: 40px;
+    background: #ffffff;
+    box-shadow: 0 0 5px;
+    text-align: center;
+  }
+
+.addimgmodal input[type = "button"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #9256f9;
+    padding: 12px;
+    outline: none;
+    color: #313131;
+    border-radius: 3px;
+    transition: 0.2s;
+    cursor: pointer;
+    width: 320px;
+    font-size: 18px;
+    color: #9256F9;
+}
+
+.addimgmodal input[type = "button"]:hover{
+    background: #9256f9;
+    color: #ffffff;
+}
+
+.file {
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid #9256f9;
+    padding-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    color: #9256f9;
+    font-size: 14px;
+    min-width: 320px;
+    max-width: 320px;
+}
