@@ -1,0 +1,91 @@
+* { 
+    box-sizing: border-box; 
+  }
+  
+  .search html {
+    box-sizing: border-box;
+    min-height:100%;
+    position: relative;
+  }
+  
+
+  body { 
+    font-family: sans-serif; 
+  }
+  
+  .main-carousel {
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    filter: brightness(20%);
+  }
+  
+  .carousel-cell {
+    overflow: hidden;
+    margin: -10px;
+  }
+  
+  .carousel-cell img {
+    display: block;
+    height: 916px;
+    filter: blur(10px);
+  }
+  
+  .flickity-button {
+    background: transparent;
+    color: #9256F9;
+    display: none;
+  }
+  
+  .flickity-page-dots .dot {
+    height: 4px;
+    width: 40px;
+    margin: 0;
+    border-radius: 0;
+    color: #9256F9;
+  }
+  
+  .flickity-page-dots {
+    bottom: 50px;
+    color: #9256f9;
+  }
+  
+  .static-banner {
+    position: absolute;
+    background: hsla(0, 0%, 0%, 0.438);
+    z-index: 2;
+    padding: 2px 20px;
+    font-size: 26px;
+    color: white;
+    pointer-events: none;
+    display: none;
+  }
+  
+  .static-banner1 {
+    margin-top: 10px;
+    left: 10px;
+    top: 20px;
+    border-radius: 2px;
+  }
+  
+  .carousel-cell-image.flickity-lazyloaded,
+  .carousel-cell-image.flickity-lazyerror {
+    opacity: 1;
+  }
+  
+  
+  .carousel.is-fullscreen .carousel-cell {
+    height: 100%;
+  }
+  
+  .img-description {
+    display: flex;
+    text-align: center;
+    padding-top: 10px;
+    justify-content: space-around;
+    background-color: #363636;
+    padding-bottom: 10px;
+    color: white;
+    z-index: 0;
+    display: none;
+  }

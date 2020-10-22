@@ -1,0 +1,74 @@
+.hrcontainer hr {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.uploadfromcontainer {
+    margin-left: 500px;
+    margin-right: 500px;
+    min-width: 400px;
+    padding-bottom: 200px;
+}
+
+.restaurantname {
+    text-align: center;
+}
+
+.restaurantinfocontainer input[type = "text"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #414141;
+    padding: 14px 10px;
+    width: 400px;
+    outline: none;
+    color: #313131;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.restaurantinfocontainer input[type = "text"]:focus{
+border-color: #9256f9;
+}
+
+.submitbtncontainer {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 2px;
+    justify-content: space-around;
+    cursor: pointer;
+    width: 400px;
+}
+
+.uploadbtn {
+    margin-left: 250px;
+}
+
+.submitbtn {
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid #9256f9;
+    padding: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 2px;
+    font-weight: 600;
+    color: #9256f9;
+}
+
+.submitbtncontainer :hover {
+    background-color: #9256f9;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.infomessage {
+    color: red;
+    text-align: left;
+    font-size: 14px;
+    display: none;
+    margin-left: 250px;
+}

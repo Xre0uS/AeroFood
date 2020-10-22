@@ -1,0 +1,207 @@
+.hrcontainer hr {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.userinfocontainer {
+    margin-left: 500px;
+    margin-right: 500px;
+    padding-bottom: 200px;
+}
+
+.avatarcontainer {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+}
+
+.useravatar {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    border-radius: 50%;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.avatar {
+    position: relative;
+    margin-top: -105px;
+    margin-left: 27px;
+}
+
+.updatebtncontainer {
+    position: relative;
+    height: 30px;
+    width: 100px;
+    align-content: center;
+    border-radius: 2px;
+    justify-content: space-around;
+    cursor: pointer;
+    margin-right: 250px;
+    float: right;
+    max-width: 100px;
+}
+
+.browsecontainer {
+    position: relative;
+    height: 30px;
+    width: 100px;
+    align-content: center;
+    border-radius: 2px;
+    justify-content: space-around;
+    cursor: pointer;
+    margin-right: 250px;
+    float: right;
+    max-width: 100px;
+}
+
+.updatekbtn {
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid #9256f9;
+    padding-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    color: #9256f9;
+    font-size: 14px;
+}
+
+.uploadbtn{
+    max-width: 100px;
+}
+
+.updatepbtncontainer :hover {
+    background-color: #9256f9;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.updatebtncontainer :hover {
+    background-color: #9256f9;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.username {
+    text-align: center;
+}
+
+.updateinfocontainer input[type = "text"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #414141;
+    padding: 14px 10px;
+    width: 400px;
+    outline: none;
+    color: #313131;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.updateinfocontainer input[type = "text"]:focus{
+border-color: #9256f9;
+}
+
+.updatepassword {
+    clear: both;
+    text-align: center;
+    margin-top: 50px;
+}
+.seperatorcontainer {
+    clear: both;
+}
+
+.updatepwcontainer input[type = "password"]{
+    border:0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #414141;
+    padding: 14px 10px;
+    width: 400px;
+    outline: none;
+    color: #313131;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.updatepwcontainer input[type = "password"]:focus{
+    border-color: #9256f9;
+}
+
+.accactioncontainer {
+    align-content: center;
+    margin: 0 auto;
+}
+
+.deaccbtncontainer {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 2px;
+    justify-content: space-around;
+    cursor: pointer;
+    width: 400px;
+}
+
+.deacc {
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid #9256f9;
+    padding: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 2px;
+    font-weight: 600;
+    color: #9256f9;
+}
+
+.deaccbtncontainer :hover {
+    background-color: #9256f9;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.delaccbtncontainer {
+    position: relative;
+    margin: 0 auto;
+    border-radius: 2px;
+    justify-content: space-around;
+    cursor: pointer;
+    width: 400px;
+}
+
+.delacc {
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid #FF2323;
+    padding: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 2px;
+    font-weight: 600;
+    color: #FF2323;
+}
+
+.delaccbtncontainer :hover {
+    background-color: #FF2323;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.infowarningtext {
+    clear: both;
+    font-size: 14px;
+    color: red;
+    float: left;
+    padding-left: 250px;
+}

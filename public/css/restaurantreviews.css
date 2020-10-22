@@ -1,0 +1,152 @@
+.restaurantreviewfncontainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 150px;
+    position: relative;
+}
+
+.restaurantname {
+    position: relative;
+}
+
+.backbtncontainer {
+    position: relative;
+    height: 30px;
+    width: 100px;
+    align-content: center;
+    border-radius: 2px;
+    justify-content: space-around;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-top: -5px;
+}
+
+.backbtn {
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid #9256f9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    color: #9256f9;
+}
+
+.backbtncontainer :hover {
+    background-color: #9256f9;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.wreviewbtncontainer {
+    position: absolute;
+    border: 2px solid #9256f9;
+    border-radius: 2px;
+    justify-content: space-around;
+    margin-left: 72.8%;
+}
+
+.wreviewbtn {
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+
+.wreviewbtncontainer :hover {
+    background-color: #9256f9;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.gridcontainer {
+    padding-left: 150px;
+    padding-right: 150px;
+    position: relative;
+}
+
+.grid {
+/* Grid Fallback */
+    display: flex;
+    flex-wrap: wrap;
+
+    /* Supports Grid */
+    display: grid;
+    grid-template-columns: minmax(450px, 1fr);
+    grid-gap: 3em;
+}
+
+.module {
+/* Demo-Specific Styles */
+    background: #ffffff;
+    display: flex;
+    justify-content: left;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.096);
+    transition: transform .2s;
+
+    /* Flex Fallback */
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 200px;
+}
+
+.modulecontainer {
+    padding: 20px;
+    padding-bottom: 40px;
+    min-width: 100%;
+}
+
+.userreviewimg {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 30px;
+    float: left;
+}
+
+.userreviewname {
+    padding-left: 10px;
+    font-size: 25px;
+    float: left;
+}
+
+.userreivewtimestamp{
+    font-size: 14px;
+    float: right;
+}
+
+.userreivewcontainer {
+    float: right;
+    clear: right;
+    margin-top: 20px;
+}
+
+.star {
+    float: right;
+}
+
+.userreviewrating{
+    float: right;
+    font-size: 16px;
+    padding-right: 10px;
+    margin-top: -1px;
+}
+
+.userreviewbodycontainer {
+    margin-top: 50px;
+    padding: 10px;
+    padding-top: 30px;
+    clear: both;
+}
+
+.userreviewbody {
+    color: #474747;
+    line-height: 25pt;
+    font-size: 18px;
+    text-align: justify;
+}
+

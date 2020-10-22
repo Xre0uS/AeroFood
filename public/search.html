@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/flickity.css" media="screen">
+    <link rel="stylesheet" href="css/bigcarousel.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/search.css">
+    <script src="js/navbar.js"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+    <script src="js/w3.js"></script>
+    <title>Search - Aerofood</title>
+</head>
+
+<body onload="showRestaurantImages(), timer(), checkforlogin()">
+    <!-- NAVBAR -->
+    <nav>
+        <div class="burgerIcon">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+    
+        <div class="nav-links" id="tabnav">
+          <li><a id="hometab" href="home.html">Home</a></li>
+          <li><a id="restauranttab" href="restaurants.html">Restaurants</a></li>
+          <li><a id="searchtab" href="search.html" class="active">Search</a></li>
+          <li><a id="abouttab" href="about.html">About</a></li>
+        </div>
+    
+        <div class="logo" id="logo">
+          <a href="home.html">
+            <div class="logoIcon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="35" viewBox="0 0 36.599 39.939">
+                <path id="UXID_Icon_no_bg"
+                  d="M48.019,17.006c2.018.5,5.676,1.585,5.79,2.212.115.465-.384,1.421-.941,2.683a9.1,9.1,0,0,1-1.506,2.683,1.337,1.337,0,0,1-.356.126c-.489.1-.883.029-1.621.109a32.707,32.707,0,0,0-3.766.471,56.619,56.619,0,0,0-6.166,1.93A18.641,18.641,0,0,0,36.2,28.492c-.26.117-.24.176,0,.235,2.778.792,5.624,1.405,8.144,2.354A8.092,8.092,0,0,1,47.031,32.3a.835.835,0,0,1,0,.612c-.066.253-.383.776-.659,1.412-.428.813-.834,2.457-1.553,2.777-1.4.538-2.589,1-4,1.553a19.164,19.164,0,0,0-4.189,2.777,4.746,4.746,0,0,0-1.742,3.3,3.208,3.208,0,0,0,1.365,2.448,23.035,23.035,0,0,0,3.954,2.448c.009.011.153.245.094.377A51.207,51.207,0,0,1,37.8,55.182a.653.653,0,0,1-.659-.047,16.367,16.367,0,0,1-2.683-1.883c-2.5-2.091-5.458-5.945-4.048-10.78a13.694,13.694,0,0,1,4.9-6.59c.536-.383,1.137-.654,1.695-.989.028-.012.133-.064.141-.094-.007-.038-.113-.076-.141-.094-.591-.183-1.419-.338-2.212-.518-1.972-.447-4.37-.864-6.119-1.083-.489-.056-1.15-.131-2.071-.188a1.914,1.914,0,0,1-1.271-.329.919.919,0,0,1-.188-.706c.12-1.532.327-3.752.377-4.142a1.872,1.872,0,0,1,.094-.424,4.161,4.161,0,0,1,.894-.753,49.58,49.58,0,0,1,9.273-4.1,1.669,1.669,0,0,0,.377-.141,1.554,1.554,0,0,0-.377-.047,83.763,83.763,0,0,0-10.544.377c-.238.026-1.942.234-3.06.424a7.238,7.238,0,0,1-2.212.282c-.845-.689-2.01-3.808-2.259-4.331-.089-.282-.541-.9-.471-1.412.287-.769,3.1-1.11,3.154-1.13a41.379,41.379,0,0,1,6.025-.894c1.458-.127,2.95-.569,11.862,0a54.594,54.594,0,0,1,9.744,1.412Z"
+                  transform="translate(-17.227 -15.31)" fill="#9256f9" fill-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="logoText">
+              Aerofood
+            </div>
+          </a>
+        </div>
+    
+        <div id="loginfncontainer" class="loginfncontainer">
+          <div id="loginbtncontainer" class="loginbtncontainer" onclick="shloginmodel()">
+            <button id="login-btn" class="login-btn">
+              <div class="login-txt">
+                LOGIN
+              </div>
+            </button>
+          </div>
+          <div id="logincontainer" class="logincontainer" style="display: none;">
+            <div id="login-modal" class="login-modal animate">
+              <form class="login">
+                <h1>LOGIN</h1>
+                <div class="space"></div>
+                <hr />
+                <div class="space"></div>
+                <input type="text" id="usernamebox" name="" placeholder="Username" value="">
+                <input type="password" id="passwordbox" name="" placeholder="Password" value="">
+                <input type="checkbox" class="usercheckbox" id="usercheckbox" name="">
+                <label for="usercheckbox" class="staylogged">Stay logged in</label>
+                <div class="bigspace"></div>
+                <div class="bigspace"></div>
+                <div id="wrongpassword" class="warningtext" style="display: none">Incorrect password</div>
+                <div id="wronguser" class="warningtext" style="display: none">User not found</div>
+                <input type="button" name="" value="LOGIN" onclick="verifyuser()">
+              </form>
+    
+              <div>
+                <a id="forgotpsw" class="psw"
+                  onclick="shloginmodel(), shfpswmodal()">Forgot
+                  password?</a>
+                <div class="space"></div>
+                <p class="signup">New user?<a class="signuplink" onclick="shloginmodel(), shsignupmodal()">
+                    Sign up here.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div id="userbtncontainer" class="userbtncontainer">
+          <div class="btncontainer">
+            <div class="userbtn">
+              <div id="usergreet" class="userwelcome"></div>
+            </div>
+          </div>
+          <div class="userdropdown">
+            <a href="userinfo.html">Profile</a>
+            <a href="userreviews.html">My reviews</a>
+            <a href="#" onclick="logout()">Logout</a>
+          </div>
+        </div>
+      </nav>
+    
+      <div id="fpswmodal" class="fpswmodal animate" style="display: none;">
+        <form class="fpsemail">
+          <h1>Enter your username to reset password</h1>
+          <div class="space"></div>
+          <hr />
+          <div class="space"></div>
+          <input type="text" name="" placeholder="Username">
+          <div id="resetinfotext" class="warningtext" style="display: none;">No user found</div>
+          <input id="resetpwname" type="button" name="" value="SUBMIT" onclick="resetpassword()">
+        </form>
+      </div>
+    
+      <div id="signupcontainer" class="signupcontainer" style="display: none;">
+        <div id="signupmodal" class="signupmodal animate">
+          <form class="signup">
+            <h1>SIGN UP</h1>
+            <div class="space"></div>
+            <hr />
+            <div class="space"></div>
+    
+            <div class="radiocontainer">
+              <input type="radio" id="male" name="gender" value="M">
+              <label class="radio" for="male">Male</label>
+              <input type="radio" id="female" name="gender" value="F">
+              <label class="radio" for="female">Female</label>
+            </div>
+    
+            <input id="usernamesignupbox" type="text" name="" placeholder="Username">
+            <input id="emailsignupbox" type="text" name="" placeholder="Email">
+            <input id="numsignupbox" type="text" name="" placeholder="Mobile number">
+            <input id="adsignupbox" type="text" name="" placeholder="Address">
+            <input id="tpwsignupbox" type="password" name="" placeholder="Password">
+            <input id="pwsignupbox" type="password" name="" placeholder="Confirm password">
+            <div class="space"></div>
+            <div id="warninginfotext" class="warningtext" style="display: none;">Please enter all the information</div>
+            <div id="warningpwtext" class="warningtext" style="display: none;">The two passwords do not match</div>
+            <div id="warningusernametext" class="warningtext" style="display: none;">This username is already taken</div>
+            <input type="button" name="" value="SUBMIT" onclick="usersignup()">
+          </form>
+        </div>
+      </div>
+    
+      <div id="confirmmodal" class="confirmmodal animate" style="display: none;">
+        <form class="confirmtxt">
+            <h1>Sign up success</h1>
+            <div class="space"></div>
+            <hr />
+            <div class="bigspace"></div>
+            <input type="button" name="" value="OK" onclick="location.reload();">
+        </form>
+    </div>
+    
+    <div id="resetconfirmmodal" class="confirmmodal animate" style="display: none;">
+      <form class="confirmtxt">
+          <h1 id="resettext"></h1>
+          <div class="space"></div>
+          <hr />
+          <div class="bigspace"></div>
+          <input type="button" name="" value="OK" onclick="location.reload();">
+      </form>
+    </div>
+    <!-- navbar -->
+
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+    <div class="space"></div>
+
+
+
+
+    <div class="main-carousel">
+    </div>
+
+    <div class="searchwrapper">
+        <div class="searchcontainer">
+            <input type="text" class="searchinput" id="searchinput" placeholder="Search">
+        </div>
+    </div>
+</body>
+
+<script>
+    w3.includeHTML();
+
+    (function ($) {
+        $(document).ready(function () {
+            $('.main-carousel').flickity({
+                cellAlign: 'center',
+                wrapAround: true,
+                autoPlay: true,
+                pauseAutoPlayOnHover: false,
+                fullscreen: true,
+                cellSelector: '.carousel-cell',
+                imagesLoaded: true,
+                lazyLoad: true,
+                percentPosition: false,
+                draggable: false
+            });
+            var modal = document.getElementById('logincontainer', 'fpswmodal', 'signupcontainer');
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        })
+    })(jQuery)
+
+    var input = document.getElementById("searchinput");
+    input.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+            var searchTerm = document.getElementById('searchinput').value;
+            console.log(searchTerm)
+            if (searchTerm !== null) {
+                sessionStorage.setItem("restaurantSearchTerm", searchTerm);
+                window.location.href = "restaurants.html"
+                event.preventDefault();
+            }
+        }
+    });
+
+    var $carousel = $('.main-carousel').flickity({
+        initialIndex: 0
+    });
+
+
+    var restaurantimg_array = [];
+
+    function showRestaurantImages() {
+        var request = new XMLHttpRequest();
+        request.open("GET", "/restaurants/images/", true);
+        request.setRequestHeader("Content-Type", "application/json");
+        request.onload = function () {
+            restaurantimg_array = JSON.parse(request.responseText);
+            shuffle(restaurantimg_array)
+            displayRestaurantImages();
+        };
+        request.send();
+    }
+
+    function displayRestaurantImages() {
+        for (var i = 0; i < restaurantimg_array.length; i++) {
+            var carouselimage = restaurantimg_array[i].image;
+            var $cellElems = $('<div class="carousel-cell" ><img src=' + carouselimage + '></div>');
+            $carousel.flickity('append', $cellElems);
+        }
+    }
+
+    setInterval(timer, 3000);
+
+    function timer() {
+        $carousel.flickity('next', isWrapped = true)
+    }
+
+    function showloginmodel() {
+        var x = document.getElementById("logincontainer");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function hideloginbtn() {
+        var x = document.getElementById("loginbtncontainer");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function hideuserbtn() {
+        var x = document.getElementById("userbtncontainer");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function closeLogincontainer() {
+        var x = document.getElementById("logincontainer");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function closefpswmodal() {
+        var x = document.getElementById("fpswmodal");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function closesignupmodal() {
+        var x = document.getElementById("signupmodal");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function shuffle(restaurantimg_array) {
+        var currentIndex = restaurantimg_array.length, temporaryValue, randomIndex;
+
+        // While there remain elements to shuffle...
+        while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = restaurantimg_array[currentIndex];
+            restaurantimg_array[currentIndex] = restaurantimg_array[randomIndex];
+            restaurantimg_array[randomIndex] = temporaryValue;
+        }
+
+        return restaurantimg_array;
+    }
+
+
+</script>
+
+</html>

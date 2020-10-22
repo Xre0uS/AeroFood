@@ -1,0 +1,111 @@
+.restaurantname {
+    position: relative;
+    margin-left: 150px;
+}
+
+.reviewfncontainer {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.reviewcontainer {
+    position: relative;
+}
+
+.ratingcontainer {
+    position: relative;
+    margin-left: 150px;
+}
+
+.rating {
+    margin-left: 20px;
+}
+
+.reviewtextbox {
+    position: relative;
+    width: 1600px;
+    height: 400px;
+    font-size: 24px;
+    padding: 20px;
+}
+
+
+textarea::placeholder {
+    font-size: 24px;
+}
+
+textarea:focus::placeholder {
+    color: transparent;
+}
+
+::placeholder :focus {
+    color: transparent;
+}
+
+.subbtncontainer {
+    position: relative;
+    width: 700px;
+    align-content: center;
+    border-radius: 2px;
+    justify-content: space-around;
+    cursor: pointer;
+    float: left;
+    margin-top: 50px;
+    clear: none;
+}
+
+.subbtn {
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid #9256f9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #9256f9;
+    clear: none;
+}
+
+.subbtncontainer :hover {
+    background-color: #9256f9;
+    color: white;
+    transition: 0.2s ease;
+}
+
+
+.cancelbtncontainer {
+    position: relative;
+    width: 700px;
+    align-content: center;
+    border-radius: 2px;
+    justify-content: space-around;
+    cursor: pointer;
+    float: right;
+    margin-top: 50px;
+}
+
+.cancelbtn {
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+    border: 2px solid #FF2323;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #FF2323;
+}
+
+.cancelbtncontainer :hover {
+    background-color: #FF2323;
+    color: white;
+    transition: 0.2s ease;
+}
+
+.rwarningtext {
+    clear: none;
+    font-size: 14px;
+    color: red;
+    float: left;
+  }

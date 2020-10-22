@@ -1,0 +1,40 @@
+.button {
+    position: absolute;
+    top: 60%;
+}
+
+.file {
+    position: absolute;
+    top: 50%;
+}
+
+.carousel {
+    background: #FAFAFA;
+  }
+  
+  .carousel-cell {
+    width: 28%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 22px;
+  }
+
+  .button1 {
+    left: 10%;
+  }
+
+  .img {
+    position: absolute;
+    top: 10%;
+    width: 30%;
+    height: 30%;
+}

@@ -1,0 +1,92 @@
+.gridcontainer {
+    padding-left: 150px;
+    padding-right: 150px;
+    position: relative;
+}
+
+.grid {
+/* Grid Fallback */
+    display: flex;
+    flex-wrap: wrap;
+
+    /* Supports Grid */
+    display: grid;
+    grid-template-columns: minmax(450px, 1fr);
+    grid-gap: 3em;
+}
+
+.module {
+/* Demo-Specific Styles */
+    background: #ffffff;
+    display: flex;
+    justify-content: left;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.096);
+    transition: transform .2s;
+    border: 1px solid black;
+
+    /* Flex Fallback */
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 200px;
+}
+
+.modulecontainer {
+    padding: 20px;
+    min-width: 100%;
+}
+
+.userreivewtimestamp{
+    font-size: 14px;
+    float: right;
+    clear: none;
+}
+
+.userreivewcontainer {
+    float: right;
+    clear: both;
+    margin-top: -20px;
+}
+
+.star {
+    float: right;
+    clear: both;
+    top: 0;
+}
+
+.userreviewrating{
+    float: right;
+    font-size: 16px;
+    padding-right: 10px;
+    margin-top: -1px;
+    clear: none;
+}
+
+.userreviewbodycontainer {
+    margin-top: 50px;
+    padding: 10px;
+    padding-top: 30px;
+    clear: none;
+}
+.userreviewbody {
+    color: #474747;
+    line-height: 25pt;
+    font-size: 18px;
+    text-align: justify;
+}
+.restaurantname {
+    margin-top: 30px;
+    clear: none;
+    float: left;
+}
+
+.delreview {
+    float: right;
+    clear: none;
+    cursor: pointer;
+}
+
+.delreview :hover{
+    fill: red;
+}
